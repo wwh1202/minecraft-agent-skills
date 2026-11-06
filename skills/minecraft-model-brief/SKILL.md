@@ -1,29 +1,18 @@
----
-name: minecraft-model-brief
-description: Convert a Minecraft mob, item, block, cosmetic, prop, or character idea into a measurable 3D model specification. Use before creating Blockbench models, Bedrock geometry, Java item/block models, GeckoLib assets, rigs, or animations.
----
+## Purpose
+Create a measurable specification that prevents an AI agent from guessing platform, scale, hierarchy, or deliverable requirements.
 
-# Minecraft Model Brief
+## Trigger
+Activate when a user describes a model idea or asks for a Minecraft asset plan before implementation.
 
-## Inputs
-Capture target game/platform and loader, target format, intended in-game scale, reference images, silhouette, palette, style, texture resolution, animation needs, export destination, and performance constraints. Ask only for missing facts that materially change the asset.
+## Outputs
+A completed model brief, uncertainty list, part hierarchy, texture/animation plan, and acceptance checklist.
 
-## Produce a model brief
-- Asset identity and in-game purpose.
-- Target format and exact supported version.
-- Front/side/back silhouette notes and coordinate/orientation convention.
-- Bounding box, origin/pivot, proportions, symmetry, and level of detail.
-- Named body parts and hierarchy proposal.
-- Texture atlas dimensions, palette, transparency/emissive requirements.
-- Required animations and states (idle, walk, attack, hurt, death, interaction).
-- Export files and runtime integration target.
+## Workflow
+Gather required inputs, resolve format-changing ambiguities, produce the brief, and obtain confirmation when an unresolved choice changes the exported asset.
 
-## Design constraints
-- Prefer readable silhouettes and intentional negative space over unnecessary cube count.
-- Reuse mirrored geometry where appropriate; avoid accidental duplicate/intersecting parts.
-- Keep pivots and bone names stable for animation/runtime integration.
-- Distinguish visual reference from licensed source assets. Record attribution and permission.
-- Never infer exact geometry from one perspective; mark uncertain dimensions.
+## Safety
+Use only user-authorized references and record attribution/permission for third-party source assets.
 
-## Acceptance criteria
-A brief is ready only when platform/format, scale/origin, parts hierarchy, texture plan, animation scope, and export target are explicit. Produce a checklist that can be evaluated from the model and exported files.
+## Failure handling
+If the target format or runtime cannot be established, ask one focused clarification and do not generate format-specific files.
+
