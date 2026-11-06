@@ -2,9 +2,7 @@
 
 ## Unreleased
 
-- Initialized the public project charter and skill development standards.
-- Added four draft skills: feature planning, market opportunity, Paper plugin engineering, and plugin QA.
-- Added benchmark scenario definitions for the starter skills.
-- Added a dependency-free structural validator and GitHub Actions workflow.
-- Adopted PC Radar's requirements traceability, risk governance, engineering contract, and multi-layer validation model.
-- Added a reusable feature brief template and evaluation-suite roadmap.
+- Expanded the library into a composable 14-skill workflow covering discovery, planning, Paper API research, implementation, TDD, debugging, performance, security, compatibility, QA, skill authoring, and release maintenance.
+- Added upstream research and adaptation notes for MJP-Paper-Skills, GitHub Awesome Copilot Minecraft plugin skill, PaperMC docs, Superpowers, Agent Skills specification, and cross-industry skill collections.
+- Added a skill catalog, registry, composition benchmarks, and upstream license policy.
+- All newly added skills remain Draft pending behavioral evaluation and real Paper plugin pilots.
