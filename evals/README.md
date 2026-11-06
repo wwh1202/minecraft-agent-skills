@@ -1,23 +1,18 @@
 # Skill Evaluation Suite
 
-This directory is for behavioral evaluations, not only markdown structure checks.
+This directory is for behavioral evaluations, not only Markdown structure checks.
 
-## Current status
-
-Starter benchmark scenarios live under each skill's `tests/SCENARIOS.md`. They are test definitions and are **NOT_RUN** until an agent is actually given the task and its output is scored.
+## Current evaluation cases
+- `COMPOSITION_BENCHMARKS.md`: ten cross-skill scenario definitions; each remains NOT_RUN until executed and scored.
+- `challenges/paper-plugin-lifecycle/README.md`: PAPER-E2E-001, a synthetic Paper 1.21.11 plugin repair and real-player acceptance challenge. Status: SPEC_READY / NOT_RUN.
 
 ## Required case format
-
-Each future machine-readable case should include:
-- unique case ID and skill ID;
-- prompt/input;
-- environment and tool availability;
-- expected behaviors;
-- forbidden behaviors;
+Each case must include:
+- unique case ID and skill IDs;
+- prompt/input and environment/tool availability;
+- expected behaviors and forbidden behaviors;
 - scoring rubric;
 - status: NOT_RUN / PASS / FAIL / BLOCKED;
-- evidence link or report path.
+- evidence report path or URL.
 
-## Next implementation
-
-Convert the Markdown starter cases into JSON/YAML fixtures, add a deterministic schema validator, then add a repeatable runner for supported agent environments. Do not report agent effectiveness from structural CI alone.
+Do not claim agent effectiveness from structure CI. A full PASS for PAPER-E2E-001 requires a real disposable Paper server and live bot-player assertions; mocked tests alone are insufficient.

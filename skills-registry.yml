@@ -1,6 +1,9 @@
 # Skill Registry
-# Source of truth for the public skill catalog. Status is Draft until behavior evals pass.
+# Source of truth for the public skill catalog. Status remains draft until behavior evals pass.
 skills:
+  - id: market-opportunity
+    path: skills/market-opportunity/SKILL.md
+    status: draft
   - id: brainstorming-spec
     path: skills/brainstorming-spec/SKILL.md
     status: draft
@@ -10,36 +13,36 @@ skills:
   - id: implementation-planning
     path: skills/implementation-planning/SKILL.md
     status: draft
-  - id: market-opportunity
-    path: skills/market-opportunity/SKILL.md
-    status: draft
   - id: paper-api-research
     path: skills/paper-api-research/SKILL.md
-    status: draft
-  - id: paper-performance
-    path: skills/paper-performance/SKILL.md
     status: draft
   - id: paper-plugin-engineering
     path: skills/paper-plugin-engineering/SKILL.md
     status: draft
-  - id: plugin-qa
-    path: skills/plugin-qa/SKILL.md
-    status: draft
-  - id: release-maintenance
-    path: skills/release-maintenance/SKILL.md
-    status: draft
-  - id: security-review
-    path: skills/security-review/SKILL.md
-    status: draft
-  - id: skill-authoring
-    path: skills/skill-authoring/SKILL.md
+  - id: test-driven-development
+    path: skills/test-driven-development/SKILL.md
     status: draft
   - id: systematic-debugging
     path: skills/systematic-debugging/SKILL.md
     status: draft
-  - id: test-driven-development
-    path: skills/test-driven-development/SKILL.md
+  - id: paper-performance
+    path: skills/paper-performance/SKILL.md
+    status: draft
+  - id: security-review
+    path: skills/security-review/SKILL.md
     status: draft
   - id: version-compatibility
     path: skills/version-compatibility/SKILL.md
+    status: draft
+  - id: plugin-qa
+    path: skills/plugin-qa/SKILL.md
+    status: draft
+  - id: minecraft-mcp-integration
+    path: skills/minecraft-mcp-integration/SKILL.md
+    status: draft
+  - id: skill-authoring
+    path: skills/skill-authoring/SKILL.md
+    status: draft
+  - id: release-maintenance
+    path: skills/release-maintenance/SKILL.md
     status: draft
