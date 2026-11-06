@@ -2,43 +2,40 @@
 
 ## Current state
 
-At initial project setup, the starter skills are drafts. No claim is made that the skills have passed automated CI, benchmark prompts, or a real Paper server pilot. The tests below define the required evidence.
+The starter skills are drafts. GitHub Actions structural validation has passed on the current main branch. Behavioral skill evaluations and a real Paper server pilot have not yet been run. Do not confuse these statuses.
 
 ## Test layers
 
+See [Validation Architecture](VALIDATION_ARCHITECTURE.md) for the complete L1–L6 model.
+
 ### 1. Repository checks
 - Required top-level files exist.
-- Each skill has valid YAML frontmatter with name and description.
+- Each skill has valid frontmatter with name and description.
 - Skill directory and metadata names match.
 - Required sections exist.
 - Internal relative links resolve.
-- No TODO/TBD/placeholder text remains in a release candidate unless explicitly tracked.
+- No unresolved placeholders remain in a release candidate.
 - No secrets or private configuration are present.
 
 ### 2. Scenario benchmark
 
-Each skill must include at least:
-- 2 normal tasks
-- 2 incomplete-input tasks
-- 1 conflicting-requirements task
-- 1 unsafe or prompt-injection task
-- 1 out-of-scope task
+Each skill must include normal, incomplete-input, conflicting-requirements, adversarial/untrusted-content, failure/unavailable-tool, and out-of-scope cases.
 
-Each scenario includes input, expected behaviors, must-not behaviors, and a scoring rubric.
+Each scenario includes input, expected behaviors, must-not behaviors, and a scoring rubric. Until an agent is actually tested, status is NOT_RUN.
 
 ### 3. Paper plugin engineering pilot
 
 For a real implementation, record:
-- Minecraft and Paper versions
-- Java toolchain version
-- build tool and dependency versions
-- clean build output
-- unit/integration test output
-- server startup and shutdown smoke test
-- plugin enable/disable behavior
-- permission and configuration tests
-- performance-sensitive path checks
-- compatibility limitations
+- Minecraft and Paper versions;
+- Java toolchain version;
+- build tool and dependency versions;
+- clean build output;
+- unit/integration test output;
+- server startup and shutdown smoke test;
+- plugin enable/disable behavior;
+- permission and configuration tests;
+- performance-sensitive path checks;
+- compatibility limitations.
 
 ### 4. Release gate
 
@@ -50,17 +47,16 @@ A skill release requires:
 - version and changelog updated;
 - maintainer review.
 
-## Initial manual acceptance checklist
+A plugin release additionally requires a clean build, critical tests, runtime smoke test, compatibility evidence, and rollback plan.
 
-- [ ] README accurately describes project status.
-- [ ] Charter defines scope and non-goals.
-- [ ] Development guide covers research through maintenance.
-- [ ] Skill specification defines required contract.
-- [ ] Market research distinguishes source register from completed research.
-- [ ] Each starter skill has trigger, inputs, outputs, workflow, safety, failure behavior, and acceptance criteria.
-- [ ] No draft is labeled production-ready.
-- [ ] A later CI workflow validates the same rules automatically.
+## Verification vocabulary
+
+- NOT_RUN: defined but not executed.
+- PASS: executed and observed to meet criteria.
+- FAIL: executed and did not meet criteria.
+- BLOCKED: could not execute due to missing environment/tool/permission.
+- WAIVED: explicitly accepted residual risk with approver and reason.
 
 ## Failure policy
 
-If a test cannot run because a tool, server, dependency, or permission is unavailable, record it as BLOCKED—not PASS. If a scenario has ambiguous expected behavior, fix the rubric before interpreting the result.
+If a test cannot run, record BLOCKED—not PASS. If expected behavior is ambiguous, fix the rubric before interpreting results.
