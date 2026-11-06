@@ -14,7 +14,7 @@ Open-source, reusable agent skills for discovering, designing, building, testing
 
 `minecraft-model-brief -> reference-image-to-model -> blockbench-mcp-orchestration -> blockbench-modeling -> pixel-texture-uv -> minecraft-rig-animation -> model-validation-export -> minecraft-asset-integration`
 
-The agent must discover the installed MCP tool schemas at runtime. It must not assume that different Blockbench MCP servers expose identical tool names or capabilities. See [MCP and model research](docs/BLOCKBENCH_MCP_AND_MODEL_SKILLS_RESEARCH.md) and [model benchmarks](evals/MODEL_ASSET_BENCHMARKS.md).
+The agent must discover the installed MCP tool schemas at runtime. It must not assume that different Blockbench MCP servers expose identical tool names or capabilities. See [MCP and model research](docs/BLOCKBENCH_MCP_AND_MODEL_SKILLS_RESEARCH.md), [model benchmarks](evals/MODEL_ASSET_BENCHMARKS.md), and [AI skill-routing benchmarks](evals/SKILL_ROUTING_BENCHMARKS.md).
 
 ## Upstream projects reviewed
 
