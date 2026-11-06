@@ -47,13 +47,17 @@ Use before merging, releasing, upgrading, or diagnosing a Paper/Bukkit plugin.
 10. Record results as PASS, FAIL, or BLOCKED with logs and reproduction steps.
 11. Recommend release only when all critical tests pass and unresolved risks are disclosed.
 
-## Rules
+## Safety
 
 - A test is PASS only when it was actually executed and its result was observed.
 - Missing environment, credentials, or server access means BLOCKED, not PASS.
 - Prefer disposable test servers and synthetic player/data fixtures.
 - Never run destructive tests on production without explicit approval and a rollback plan.
 - Do not claim performance or security certification from a small smoke test.
+
+## Failure handling
+
+If a check cannot run, record BLOCKED and name the missing environment, tool, or permission. If a test fails, preserve the exact logs and reproduction steps; do not silently downgrade severity. If test evidence conflicts, report each result separately and block release when a critical risk remains unresolved.
 
 ## Defect report format
 
