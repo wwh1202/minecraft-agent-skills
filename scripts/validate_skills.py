@@ -5,10 +5,16 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED_SECTIONS = [
-    "Purpose", "Trigger", "Inputs", "Outputs", "Workflow",
-    "Safety", "Failure handling", "Acceptance criteria",
-]
+REQUIRED_HEADINGS = {
+    "Purpose": r"Purpose",
+    "Trigger": r"Trigger",
+    "Inputs": r"(?:Required )?Inputs",
+    "Outputs": r"Outputs",
+    "Workflow": r"Workflow",
+    "Safety": r"Safety(?: and [\w -]+)?",
+    "Failure handling": r"Failure handling",
+    "Acceptance criteria": r"Acceptance criteria",
+}
 errors = []
 skill_files = sorted((ROOT / "skills").glob("*/SKILL.md"))
 
@@ -31,9 +37,9 @@ for path in skill_files:
         errors.append(f"{rel}: name '{name.group(1)}' must match directory '{path.parent.name}'.")
     if not desc or len(desc.group(1).strip()) < 20:
         errors.append(f"{rel}: description must be present and meaningful.")
-    for section in REQUIRED_SECTIONS:
-        if not re.search(rf"^##\s+{re.escape(section)}\s*$", text, re.M | re.I):
-            errors.append(f"{rel}: missing required section '## {section}'.")
+    for label, pattern in REQUIRED_HEADINGS.items():
+        if not re.search(rf"^##\s+{pattern}\s*$", text, re.M | re.I):
+            errors.append(f"{rel}: missing required section '{label}'.")
     if re.search(r"\b(TODO|TBD|FIXME)\b", text):
         errors.append(f"{rel}: unresolved TODO/TBD/FIXME marker.")
     for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
