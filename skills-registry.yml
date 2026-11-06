@@ -1,5 +1,5 @@
 # Skill Registry
-# Status remains draft until behavioral evaluations pass.
+# All statuses remain draft until behavioral evaluation passes.
 skills:
   - id: market-opportunity
     path: skills/market-opportunity/SKILL.md
@@ -40,11 +40,38 @@ skills:
   - id: minecraft-mcp-integration
     path: skills/minecraft-mcp-integration/SKILL.md
     status: draft
+  - id: release-maintenance
+    path: skills/release-maintenance/SKILL.md
+    status: draft
   - id: skill-authoring
     path: skills/skill-authoring/SKILL.md
     status: draft
-  - id: release-maintenance
-    path: skills/release-maintenance/SKILL.md
+  - id: minecraft-art-direction
+    path: skills/minecraft-art-direction/SKILL.md
+    status: draft
+  - id: minecraft-visual-design-foundations
+    path: skills/minecraft-visual-design-foundations/SKILL.md
+    status: draft
+  - id: minecraft-silhouette-shape-language
+    path: skills/minecraft-silhouette-shape-language/SKILL.md
+    status: draft
+  - id: minecraft-color-theory-palettes
+    path: skills/minecraft-color-theory-palettes/SKILL.md
+    status: draft
+  - id: minecraft-pixel-art-craft
+    path: skills/minecraft-pixel-art-craft/SKILL.md
+    status: draft
+  - id: minecraft-material-surface-design
+    path: skills/minecraft-material-surface-design/SKILL.md
+    status: draft
+  - id: minecraft-composition-camera-lighting
+    path: skills/minecraft-composition-camera-lighting/SKILL.md
+    status: draft
+  - id: minecraft-visual-critique-iteration
+    path: skills/minecraft-visual-critique-iteration/SKILL.md
+    status: draft
+  - id: minecraft-style-guide-continuity
+    path: skills/minecraft-style-guide-continuity/SKILL.md
     status: draft
   - id: blockbench-mcp-orchestration
     path: skills/blockbench-mcp-orchestration/SKILL.md
