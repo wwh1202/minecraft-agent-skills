@@ -2,8 +2,12 @@
 
 **Case ID:** PAPER-E2E-001  
 **Target:** Paper 1.21.11 / Java 21  
-**Status:** SPEC_READY / NOT_RUN  
-**Purpose:** Prove the Skills composition can diagnose, repair, build and verify a deliberately flawed plugin using deterministic tests plus a live Paper server. This is a synthetic fixture; it contains no code or configuration from the user's private server.
+**Status:** STARTER_BUILD_PENDING / LIVE_E2E_NOT_RUN  
+**Purpose:** Prove the Skills composition can diagnose, repair, build and verify a deliberately flawed plugin using deterministic tests plus a live Paper server. This is a synthetic, isolated challenge; it contains no code or configuration from the user's private server.
+
+## Starter project
+
+The deliberately flawed starter plugin is in `starter/`. It is a small Gradle project that compiles against Paper 1.21.11 and has one passing pure-Java regression test. The starter is intentionally defective at runtime; a successful baseline build is not evidence that the plugin behavior is correct.
 
 ## Scenario
 
@@ -14,11 +18,12 @@ A small plugin named `WelcomeLedger` should:
 4. Reject unauthorized players with a clear message.
 5. Save data safely on shutdown and avoid blocking the server thread with file I/O.
 
-The starter fixture must intentionally contain at least these defects:
-- Bukkit/Paper player or world API is touched from an asynchronous task.
-- Persistence writes can race with shutdown or concurrent joins.
-- Command permission handling is incomplete.
-- Scheduled tasks are not cancelled on plugin disable.
+## Known seeded defects (do not repair before the baseline evaluation)
+- Bukkit/Paper player and configuration APIs are accessed from an asynchronous task.
+- YAML persistence is mutated and saved concurrently with joins/shutdown.
+- Command permission handling is missing.
+- Scheduled work is not cancelled/tracked during plugin disable.
+- Persisted records are not loaded into the in-memory entry map on startup.
 
 ## Required agent workflow
 

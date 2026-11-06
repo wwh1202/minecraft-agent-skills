@@ -1,0 +1,12 @@
+name: WelcomeLedger
+version: 0.1.0
+main: dev.agentchallenge.welcomeledger.WelcomeLedgerPlugin
+api-version: '1.21'
+commands:
+  welcomeledger:
+    description: WelcomeLedger administration
+    usage: /welcomeledger stats
+permissions:
+  welcomeledger.stats:
+    description: View WelcomeLedger statistics
+    default: op
