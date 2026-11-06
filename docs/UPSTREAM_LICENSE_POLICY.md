@@ -1,9 +1,11 @@
-# Upstream Reuse and License Policy
+# Upstream License and Attribution Policy
 
-1. A public GitHub repository is not automatically public domain.
-2. Before copying code, examples, images, templates, or substantial prose, inspect the exact file license and any attribution/notice requirements.
-3. Prefer original instructions derived from observed workflows and link to the upstream source.
-4. If a source has no clear license, treat copying as not permitted; describe the idea in original words and cite the source.
-5. Keep per-file provenance for any adapted code or bundled assets.
-6. Re-check licenses before releases, especially dependencies, shaded libraries, and user-submitted contributions.
-7. Never remove copyright or attribution notices from reused material.
+The project may learn from publicly visible open-source architecture and workflows, but public visibility alone does not grant reuse rights.
+
+- Prefer independent implementations of general ideas and workflows.
+- Do not copy skill prose, prompts, source code, textures, model files, screenshots, or other assets unless the exact repository license permits it.
+- Record repository URL, inspected date, license identifier, and what was learned.
+- MIT sources require retaining copyright and license notices when code or substantial portions are reused.
+- GPL sources require a separate compatibility/distribution review before incorporating code into this MIT repository.
+- If a repository has no detectable license, treat its code, docs, prompts, and assets as all-rights-reserved for reuse purposes. Link and describe it only.
+- Re-check the exact upstream commit and license before any future code reuse; licenses can change.

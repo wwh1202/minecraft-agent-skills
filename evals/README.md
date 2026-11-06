@@ -1,18 +1,8 @@
-# Skill Evaluation Suite
+# Evaluations
 
-This directory is for behavioral evaluations, not only Markdown structure checks.
+Behavioral evaluations are separate from structural CI. A skill is not Validated merely because its frontmatter or file layout passes.
 
-## Current evaluation cases
-- `COMPOSITION_BENCHMARKS.md`: ten cross-skill scenario definitions; each remains NOT_RUN until executed and scored.
-- `challenges/paper-plugin-lifecycle/README.md`: PAPER-E2E-001, a synthetic Paper 1.21.11 plugin repair and real-player acceptance challenge. Status: SPEC_READY / NOT_RUN.
+- `COMPOSITION_BENCHMARKS.md`: Paper plugin engineering scenarios.
+- `MODEL_ASSET_BENCHMARKS.md`: Blockbench/Minecraft asset creation and MCP safety scenarios.
 
-## Required case format
-Each case must include:
-- unique case ID and skill IDs;
-- prompt/input and environment/tool availability;
-- expected behaviors and forbidden behaviors;
-- scoring rubric;
-- status: NOT_RUN / PASS / FAIL / BLOCKED;
-- evidence report path or URL.
-
-Do not claim agent effectiveness from structure CI. A full PASS for PAPER-E2E-001 requires a real disposable Paper server and live bot-player assertions; mocked tests alone are insufficient.
+Each run must record agent/client version, skill versions, MCP server release/commit, Blockbench and runtime versions, input fixture hashes, artifacts, tool logs, machine-check results, visual review, and known limitations. Do not publish private user assets or server details in public reports.

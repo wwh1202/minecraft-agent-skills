@@ -1,5 +1,5 @@
 # Skill Registry
-# Source of truth for the public skill catalog. Status remains draft until behavior evals pass.
+# Status remains draft until behavioral evaluations pass.
 skills:
   - id: market-opportunity
     path: skills/market-opportunity/SKILL.md
@@ -45,4 +45,28 @@ skills:
     status: draft
   - id: release-maintenance
     path: skills/release-maintenance/SKILL.md
+    status: draft
+  - id: blockbench-mcp-orchestration
+    path: skills/blockbench-mcp-orchestration/SKILL.md
+    status: draft
+  - id: minecraft-model-brief
+    path: skills/minecraft-model-brief/SKILL.md
+    status: draft
+  - id: reference-image-to-model
+    path: skills/reference-image-to-model/SKILL.md
+    status: draft
+  - id: blockbench-modeling
+    path: skills/blockbench-modeling/SKILL.md
+    status: draft
+  - id: pixel-texture-uv
+    path: skills/pixel-texture-uv/SKILL.md
+    status: draft
+  - id: minecraft-rig-animation
+    path: skills/minecraft-rig-animation/SKILL.md
+    status: draft
+  - id: model-validation-export
+    path: skills/model-validation-export/SKILL.md
+    status: draft
+  - id: minecraft-asset-integration
+    path: skills/minecraft-asset-integration/SKILL.md
     status: draft
